@@ -119,3 +119,17 @@ Select * from orders where purchase_amount < 500;
 
 Select * from orders where purchase_amount BETWEEN 1000 and 2000;
 
+
+select SUM(purchase_amount) AS "Total sum" from orders;
+
+
+select AVG(purchase_amount) AS "Average" from orders;
+
+
+select MAX(purchase_amount) AS "Maximum" from orders;
+
+
+select MIN(purchase_amount) AS "Minumum" from orders;
+
+
+select COUNT(distinct salesman_id) AS "Total count" from orders;
