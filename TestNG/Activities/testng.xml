@@ -3,7 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="TestNG.Activity1"/>
+      <class name="TestNG.Activity3"/>
+      <class name="TestNG.Activity2"/>
       <class name="TestNG.Activity5"/>
+      <class name="TestNG.Activity7"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
