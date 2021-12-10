@@ -1,0 +1,23 @@
+// Create the XmlHolder object for the response of the request
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+//Get request
+def reqHolder = groovyUtils.getXmlHolder( "Add#Request" )
+
+//Modify the request parameters
+reqHolder["//tem:intA"] = 10
+reqHolder["//tem:intB"] = 20
+
+log.info "Interget A: ${reqHolder['//tem:intA']}"
+log.info "Interget B: ${reqHolder['//tem:intB']}"
+
+//Update request
+reqHolder.updateProperty()
+
+//Run the test step
+testRunner.runTestStepByName("Add")
+
+//Get response
+def resHolder = groovyUtils.getXmlHolder( "Add#Response" )
+
+//Print response value
+log.info "Result: ${resHolder['//ns1:AddResult']}"

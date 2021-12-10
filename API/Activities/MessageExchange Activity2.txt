@@ -1,0 +1,8 @@
+//XMLHolder import
+import com.eviware.soapui.support.XmlHolder
+
+//Create XMLHolder object
+def holder = new XmlHolder(messageExchange.responseContentAsXml)
+
+//Node exists
+assert holder["//SubtractResult"] != null
